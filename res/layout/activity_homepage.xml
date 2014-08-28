@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.reelreviews.reelreviews.HomepageActivity" 
+    android:orientation="vertical">
+    
+    <ImageView
+        android:id="@+id/homepageLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:src="@drawable/ic_launcher"
+        android:contentDescription="Marquee logo for home page"
+        />
+    <!-- TODO: add logo to homepageLogo-->
+    
+    <Button
+        android:id="@+id/createRecommendationButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="create_recommendation"
+        android:text="Create Recommendation"
+        />
+    
+    <Button
+        android:id="@+id/myRecommendationsButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="my_recommendations"
+        android:text="My Recommendations"
+        />
+    
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="profile"
+        android:text="Profile"
+        />
+    
+    <Button
+        android:id="@+id/friendsButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="friends"
+        android:text="Friends"
+        />
+    
+    <Button
+        android:id="@+id/newsFeedButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="news_feed"
+        android:text="News Feed"
+        />
+    
+    <Button
+        android:id="@+id/movieDirectoryButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="movie_directory"
+        android:text="Movie Directory"
+        />
+    
+
+</LinearLayout>

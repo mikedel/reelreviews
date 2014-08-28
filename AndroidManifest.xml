@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reelreviews.reelreviews"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomepageActivity"
+            android:label="@string/title_activity_homepage"
+            android:parentActivityName=".LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".CreateNewAccountActivity"
+            android:label="@string/title_activity_create_new_account"
+            android:parentActivityName=".LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".MyRecommendationsActivity"
+            android:label="@string/title_activity_my_recommendations"
+            android:parentActivityName=".HomepageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.HomepageActivity" />
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".HomepageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.HomepageActivity" />
+        </activity>
+        <activity
+            android:name=".FriendsActivity"
+            android:label="@string/title_activity_friends"
+            android:parentActivityName=".HomepageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.HomepageActivity" />
+        </activity>
+        <activity
+            android:name=".NewsFeedActivity"
+            android:label="@string/title_activity_news_feed"
+            android:parentActivityName=".HomepageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.HomepageActivity" />
+        </activity>
+        <activity
+            android:name=".MovieDirectoryActivity"
+            android:label="@string/title_activity_movie_directory"
+            android:parentActivityName=".HomepageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.HomepageActivity" />
+        </activity>
+        <activity
+            android:name=".CreateRecommendationActivity"
+            android:label="@string/title_activity_create_recommendation"
+            android:parentActivityName=".HomepageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.reelreviews.reelreviews.HomepageActivity" />
+        </activity>
+    </application>
+
+</manifest>

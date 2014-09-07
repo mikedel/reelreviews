@@ -1,6 +1,8 @@
 package com.reelreviews.reelreviews;
 
-import org.apache.http.client.protocol.ClientContext;
+import java.net.CookieHandler;
+import java.net.CookieManager;
+
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.protocol.BasicHttpContext;
 
@@ -11,7 +13,6 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,9 +30,8 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         db = DatabaseHelper.getInstance(this);
-        localContext.setAttribute(ClientContext.COOKIE_STORE, cookieStore);
-		((ReelReviewApp)getApplicationContext()).setHttpContext(new BasicHttpContext());
-		((ReelReviewApp)getApplicationContext()).setCookieStore(new BasicCookieStore());
+        CookieManager cookieManager = new CookieManager();
+        CookieHandler.setDefault(cookieManager);
     }
 
     public void login(View view){

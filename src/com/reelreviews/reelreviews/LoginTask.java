@@ -123,7 +123,7 @@ public class LoginTask extends AsyncTask<String, Void, String> {
 				JSONArray json_array = new JSONArray(result);
 				JSONObject object = null;
 				JSONObject fields = null;
-				int id, sender_id, receiver_id, movie_id, source_id, stars;
+				int id, sender, receiver, movie, source, stars;
 				String review, rec;
 				long date;
 				ArrayList<String> recs = new ArrayList<String>();
@@ -131,19 +131,19 @@ public class LoginTask extends AsyncTask<String, Void, String> {
 					object = json_array.getJSONObject(i);
 					id = object.getInt("pk");
 					fields = object.getJSONObject("fields");
-					sender_id = fields.getInt("sender_id");
-					receiver_id = fields.getInt("receiver_id");
-					movie_id = fields.getInt("movie_id");
-					source_id = fields.getInt("source_id");
+					sender = fields.getInt("sender");
+					receiver = fields.getInt("receiver");
+					movie = fields.getInt("movie");
+					source = fields.getInt("source");
 					stars = fields.getInt("stars");
 					review = fields.getString("review");
 					date = fields.getLong("date");
-					rec = "Recommendation(" + id + ") from " + sender_id + " for " + movie_id + "\nReview: " +
-							review + "\nStars: " + stars + " Source: " + source_id + " Date: " + date;
+					rec = "Recommendation(" + id + ") from " + sender + " for " + movie + "\nReview: " +
+							review + "\nStars: " + stars + " Source: " + source + " Date: " + date;
 					recs.add(rec);
 					Log.d("onPostExecute", rec);
 				}
-				array = (String[]) recs.toArray();
+				array = recs.toArray(new String[recs.size()]);
 			} catch (JSONException e) { e.printStackTrace(); }
 			if(array != null) {
 				ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity, android.R.layout.simple_list_item_1, array);

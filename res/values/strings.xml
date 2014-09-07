@@ -12,5 +12,6 @@
     <string name="title_activity_news_feed">NewsFeedActivity</string>
     <string name="title_activity_movie_directory">MovieDirectoryActivity</string>
     <string name="title_activity_create_recommendation">CreateRecommendationActivity</string>
+    <string name="server_url">http://192.168.2.101:8000/api/</string>
 
 </resources>
